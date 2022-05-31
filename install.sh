@@ -22,3 +22,4 @@ chmod a+x /etc/init.d/webmin
 
 rc-update add webmin
 rc-service webmin start
+tail -f /dev/null
