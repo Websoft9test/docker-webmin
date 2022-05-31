@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths: 
       - 'Dockerfile'
-      - 'cmd.sh'
+      - 'install.sh'
       - 'entrypoint.sh'
     tags:
       - v**
