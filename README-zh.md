@@ -100,7 +100,7 @@ sudo docker-compose up -d
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| onlyoffice-server | 9002 | 浏览器访问 ONLYOFFICE | Y |
+| onlyoffice-server | 9002 | 浏览器访问 Webmin | Y |
 ## 文档
 
 [Webmin 管理员手册](https://support.websoft9.com/docs/webmin)
