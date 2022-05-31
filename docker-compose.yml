@@ -4,7 +4,7 @@
 version: '3.8'
 
 services:
-  suitecrm:
+  webmin:
     image: websoft9dev/webmin:${APP_VERSION}
     container_name: ${APP_NAME}
     command: ["sh","-c","tail -f /dev/null"]
