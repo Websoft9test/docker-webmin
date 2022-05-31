@@ -20,6 +20,7 @@ stop() { \${WEBMIN} start; }
 EOF
 chmod a+x /etc/init.d/webmin
 
+echo 11111
 rc-update add webmin
 rc-service webmin start
 tail -f /dev/null
