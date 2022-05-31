@@ -1,5 +1,4 @@
 # image: https://github.com/arimal199/alpine-webmin
-
 FROM ghcr.io/arimal199/alpine-webmin
 
 LABEL maintainer="help@websoft9.com"
