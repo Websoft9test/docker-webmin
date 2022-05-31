@@ -1,18 +1,16 @@
 # image: https://hub.docker.com/r/websoft9dev/discuzq
 
-FROM ccr.ccs.tencentyun.com/discuzq/dzq:latest
+FROM ghcr.io/arimal199/alpine-webmin
 
 LABEL maintainer="help@websoft9.com"
 LABEL version="latest"
-LABEL description="DiscuzQ"
+LABEL description="Webmin"
 
-ENV DISCUZQ_MYSQL_HOST=mysql
-ENV DISCUZQ_MYSQL_USER=discuzq
-ENV DISCUZQ_MYSQL_PASSWORD=discuzq
-ENV DISCUZQ_MYSQL_DATABASE=discuzq
-ENV DISCUZQ_SITENAME=DiscuzQ
+ENV WEBMIN_USER=admin
+ENV WEBMIN_PASSWORD=admin
 
-COPY cmd.sh /tmp
-RUN chmod +x /tmp/cmd.sh
-
-CMD ["/tmp/cmd.sh"]
+WORKDIR /opt
+RUN rm -f /opt/install.sh
+ADD install.sh /opt/
+ENTRYPOINT [ "sh", "install.sh" ]
+EXPOSE 10000
