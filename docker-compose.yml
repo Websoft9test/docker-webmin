@@ -8,9 +8,8 @@ services:
     image: ghcr.io/arimal199/alpine-webmim:${APP_VERSION}
     container_name: ${APP_NAME}
     ports:
-      - '${APP_PORT}:1000'
+      - '${APP_PORT}:10000'
 
 networks:
   default:
       name: ${APP_NAME}
-
