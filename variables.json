@@ -23,7 +23,7 @@
     {
       "name": "onlyoffice-server",
       "port": "9002",
-      "description_cn": "浏览器访问 ONLYOFFICE",
+      "description_cn": "浏览器访问 Webmin",
       "description_en": "Web-GUI database management tool",
       "required": "Y"
     }
