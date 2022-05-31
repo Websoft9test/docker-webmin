@@ -1,4 +1,4 @@
-# image: https://hub.docker.com/r/websoft9dev/discuzq
+# image: https://github.com/arimal199/alpine-webmin
 
 FROM ghcr.io/arimal199/alpine-webmin
 
