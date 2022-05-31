@@ -5,8 +5,9 @@ version: '3.8'
 
 services:
   suitecrm:
-    image: ghcr.io/arimal199/alpine-webmim:${APP_VERSION}
+    image: websoft9dev/webmin:${APP_VERSION}
     container_name: ${APP_NAME}
+    command: ["sh","-c","tail -f /dev/null"]
     ports:
       - '${APP_PORT}:10000'
 
