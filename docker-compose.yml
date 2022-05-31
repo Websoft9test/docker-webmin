@@ -7,7 +7,9 @@ services:
   webmin:
     image: websoft9dev/webmin:latest
     container_name: ${APP_NAME}
-    command: ["sh","-c","tail -f /dev/null"]
+    environment:
+      - APP_USER=$APP_USER
+      - APP_PASSWORD=$APP_PASSWORD
     ports:
       - '${APP_PORT}:10000'
 
