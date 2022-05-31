@@ -5,7 +5,7 @@ version: '3.8'
 
 services:
   webmin:
-    image: ghcr.io/arimal199/alpine-webmim:latest
+    image: websoft9dev/webmin:latest
     container_name: ${APP_NAME}
     command: ["sh","-c","tail -f /dev/null"]
     ports:
