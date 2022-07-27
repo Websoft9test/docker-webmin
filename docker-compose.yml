@@ -7,7 +7,6 @@ services:
   webmin:
     image: websoft9dev/webmin:latest
     container_name: ${APP_NAME}
-    entrypoint: sleep 1000s
     environment:
       - WEBMIN_USER=$APP_USER
       - WEBMIN_PASSWORD=$APP_PASSWORD
