@@ -8,7 +8,7 @@ services:
     image: websoft9dev/webmin:${APP_VERSION}
     container_name: ${APP_NAME}
     environment:
-      - APP_PASSWORD=${APP_PASSWORD}
+      - WEBMIN_PASSWORD=${APP_PASSWORD}
     ports:
       - '${APP_PORT}:10000'
 
