@@ -1,5 +1,5 @@
 # Webmin
 
-Fork from: https://github.com/arimal199/alpine-webmin/blob/main/install.sh
+Fork from: [https://github.com/johanpi/docker-webmin/blob/master/Dockerfile]
 
 1. add ENV and new pull request to author
