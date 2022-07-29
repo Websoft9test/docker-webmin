@@ -2,7 +2,8 @@
 FROM ubuntu:focal
 MAINTAINER "websoft9"
 
-ENV DEBIAN_FRONTEND=noninteractive TZ=Europe/Amsterdam APP_PASSWORD=admin123
+ENV DEBIAN_FRONTEND=noninteractive TZ=Europe/Amsterdam 
+ENV WEBMIN_PASSWORD=admin123456
 
 # Initial updates and install core utilities
 RUN apt-get update -qq -y && \
@@ -20,7 +21,7 @@ RUN apt-get update -qq -y && \
 RUN dpkg-reconfigure locales
 
 # Install Webmin
-RUN echo root:$APP_PASSWORD | chpasswd && \
+RUN echo root:$WEBMIN_PASSWORD | chpasswd && \
     echo "Acquire::GzipIndexes \"false\"; Acquire::CompressionTypes::Order:: \"gz\";" >/etc/apt/apt.conf.d/docker-gzip-indexes && \
     update-locale LANG=C.UTF-8 && \
     echo deb https://download.webmin.com/download/repository sarge contrib >> /etc/apt/sources.list && \
