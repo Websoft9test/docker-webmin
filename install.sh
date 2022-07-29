@@ -21,7 +21,7 @@ WEBMIN=/etc/rc.d/init.d/webmin
 start() { \${WEBMIN} start; }
 stop() { \${WEBMIN} stop; }
 EOF
-chmod a+x /etc/init.d/webmin
+chmod 777 /etc/init.d/webmin
 
 rc-update add webmin
 rc-service webmin start
