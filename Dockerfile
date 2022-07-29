@@ -36,10 +36,8 @@ ENV LC_ALL C.UTF-8
 
 WORKDIR /home
 
-RUN echo "#! /bin/bash" > entrypoint.sh && \
-    echo "echo root:$WEBMIN_PASSWORD | chpasswd" >> entrypoint.sh && \
-    echo "sed -i 's;ssl=1;ssl=0;' /etc/webmin/miniserv.conf && systemctl enable cron && service webmin start && tail -f /dev/null" >> entrypoint.sh && \
-    chmod 755 entrypoint.sh
+ADD entrypoint.sh /home/
+
+RUN chmod 755 /home/entrypoint.sh
 
 CMD /home/entrypoint.sh
-
