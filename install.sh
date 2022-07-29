@@ -19,7 +19,7 @@ cat <<EOF |  tee /etc/init.d/webmin
 #!/sbin/openrc-run
 WEBMIN=/etc/rc.d/init.d/webmin
 start() { \${WEBMIN} start; }
-stop() { \${WEBMIN} start; }
+stop() { \${WEBMIN} stop; }
 EOF
 chmod a+x /etc/init.d/webmin
 
