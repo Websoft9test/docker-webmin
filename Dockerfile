@@ -2,7 +2,7 @@
 FROM ubuntu:focal
 MAINTAINER "Johan Pienaar" <johan@pienaarfamilie.nl>
 
-ENV DEBIAN_FRONTEND=noninteractive TZ=Europe/Amsterdam
+ENV DEBIAN_FRONTEND=noninteractive TZ=Europe/Amsterdam APP_PASSWORD=admin123
 
 # Initial updates and install core utilities
 RUN apt-get update -qq -y && \
@@ -20,7 +20,7 @@ RUN apt-get update -qq -y && \
 RUN dpkg-reconfigure locales
 
 # Install Webmin
-RUN echo root:password | chpasswd && \
+RUN echo root:$APP_PASSWORD | chpasswd && \
     echo "Acquire::GzipIndexes \"false\"; Acquire::CompressionTypes::Order:: \"gz\";" >/etc/apt/apt.conf.d/docker-gzip-indexes && \
     update-locale LANG=C.UTF-8 && \
     echo deb https://download.webmin.com/download/repository sarge contrib >> /etc/apt/sources.list && \
