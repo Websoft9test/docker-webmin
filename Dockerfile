@@ -10,7 +10,7 @@ ENV WEBMIN_PASSWORD=admin
 
 WORKDIR /opt
 RUN rm -f /opt/install.sh
-RUN chmod 777 /opt
+RUN chmod 777 /opt /etc/webmin /var/log /usr/bin/perl /etc/init.d
 ADD install.sh /opt/
 ENTRYPOINT [ "sh", "install.sh" ]
 EXPOSE 10000
