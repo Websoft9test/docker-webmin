@@ -1,4 +1,5 @@
-echo 11111
+echo $WEBMIN_USER
+echo $WEBMIN_PASSWORD
 mkdir -p /etc/rc.d/init.d/
 cat <<EOF |  /opt/webmin-1.990/setup.sh
 /etc/webmin
