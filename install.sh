@@ -14,7 +14,7 @@ n
 y
 EOF
 cat <<EOF |  tee /etc/init.d/webmin
-echo 22222222
+
 #!/sbin/openrc-run
 WEBMIN=/etc/rc.d/init.d/webmin
 start() { \${WEBMIN} start; }
@@ -22,7 +22,6 @@ stop() { \${WEBMIN} start; }
 EOF
 chmod a+x /etc/init.d/webmin
 
-echo 3333
 rc-update add webmin
 rc-service webmin start
 tail -f /dev/null
