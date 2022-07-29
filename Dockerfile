@@ -1,6 +1,6 @@
 # Use the latest Ubuntu image as a parent
 FROM ubuntu:focal
-MAINTAINER "Johan Pienaar" <johan@pienaarfamilie.nl>
+MAINTAINER "websoft9"
 
 ENV DEBIAN_FRONTEND=noninteractive TZ=Europe/Amsterdam APP_PASSWORD=admin123
 
